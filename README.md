@@ -1,45 +1,34 @@
-# PokemonWorld
+### Tecnologías Utilizadas
 
-This template should help get you started developing with Vue 3 in Vite.
+- **Vue3**: Framework de JavaScript para construir interfaces de usuario interactivas y reactivas.
+- **Tailwind CSS**: Framework de CSS utilitario para estilizar componentes de manera eficiente.
+- **Pinia**: Biblioteca para manejar el estado centralizado de la aplicación de forma reactiva.
+- **Axios**: Biblioteca para realizar solicitudes HTTP desde el cliente hacia servidores web.
+- **Tanstack Vue Query**: Herramienta para gestionar las solicitudes de datos de manera eficiente.
+- **RxJS**: Librería para programación reactiva, utilizada para crear modales reutilizables.
+- **Clipboard**: Utilizado para operaciones de copiar y pegar en la aplicación.
+- **Vue Test Utils y Vitest**: Herramientas para escribir y ejecutar pruebas unitarias en Vue.js.
 
-## Recommended IDE Setup
+Este proyecto utiliza una estructura modular y organizada que facilita la gestión y escalabilidad de la aplicación Vue.js. Cada módulo tiene su propio conjunto de componentes, acciones, vistas y lógica de estado, lo que permite un desarrollo eficiente y mantenible. Además, hace uso de herramientas como Vue Query, Piniapara el manejo del estado, y Vue Router para la navegación, proporcionando así una experiencia de desarrollo robusta y coherente para una aplicación web moderna.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### Comandos para Ejecutar el Proyecto con Vitest y Yarn
 
-## Type Support for `.vue` Imports in TS
+#### Instalación de Dependencias
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```bash
+yarn install
 ```
 
-### Compile and Hot-Reload for Development
+#### Ejecución
 
-```sh
-npm run dev
+```bash
+
+yarn dev
+
 ```
 
-### Type-Check, Compile and Minify for Production
+#### Pruebas unitarias
 
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+```bash
+yarn test:unit
 ```
