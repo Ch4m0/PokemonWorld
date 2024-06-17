@@ -66,10 +66,6 @@ watch(() => route.name, (newRouteName) => {
 </script>
 
 <style scoped>
-nav {
-    z-index: 10;
-}
-
 .shadow-nav {
     box-shadow: 0px -5px 4px 0px rgba(0, 0, 0, 0.05);
 }

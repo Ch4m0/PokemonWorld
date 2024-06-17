@@ -12,7 +12,6 @@ import type { Pokemon } from '../interface/pokemon.interface';
 
 const store = usePokemonStore();
 
-
 onMounted(() => {
     store.loadFavorites();
 });
@@ -20,9 +19,6 @@ onMounted(() => {
 const { searchTerm } = useSearch()
 
 const favoritePokemons = computed(() => store.favorites);
-
-
-
 
 const filteredPokemonList = computed(() => {
     return favoritePokemons?.value?.filter((pokemon: Pokemon) =>

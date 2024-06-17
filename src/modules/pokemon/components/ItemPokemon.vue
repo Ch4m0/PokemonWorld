@@ -11,12 +11,12 @@
     </li>
 </template>
 <script lang="ts" setup>
-import StarIcon from '@/icons/StarIcon.vue'
 import { computed } from 'vue'
 import { modalService } from '../../../services/modal.service'
 import type { Pokemon } from '../interface/pokemon.interface'
 import { usePokemonStore } from '../stores/pokemon.store'
 import InfoPokemon from './InfoPokemon.vue'
+import StarIcon from '@/icons/StarIcon.vue'
 
 interface Props {
     pokemon: Pokemon

@@ -1,17 +1,19 @@
 <template>
 
   <div v-if="loading" class="text-center h-[500px]">
-    <h1 class="text-xl">
-      Cargando Productos
-    </h1>
-    <p>Espere por favor</p>
+    <LoadPokeBall />
   </div>
 
+
   <ListPokemon v-else :pokemon-list="filteredPokemonList" />
-  <ButtonPagination :has-more-data="!!pokemonList && pokemonList.length < 10" :is-first-page="page === 1" :page="page"
-    class="mb-3 mt-3" />
+
+  <NoFoundData v-if="!loading && filteredPokemonList.length === 0" />
+
+  <ButtonPagination v-else :has-more-data="!!pokemonList && pokemonList.length < 10" :is-first-page="page === 1"
+    :page="page" class="mb-3 mt-1" />
 
 </template>
+
 <script lang="ts" setup>
 import { computed, onMounted, watchEffect } from 'vue';
 import { getListPokemonAction } from '../actions/get-list-pokemon.action';
@@ -23,7 +25,8 @@ import { useQuery, useQueryClient } from '@tanstack/vue-query';
 import { useSearch } from '../../common/composables/useSearch';
 import type { Pokemon } from '../interface/pokemon.interface';
 import { usePokemonStore } from '../stores/pokemon.store';
-
+import NoFoundData from '../components/NoFoundData.vue';
+import LoadPokeBall from '@/modules/common/components/LoadPokeBall.vue';
 
 
 const { page } = usePagination();
@@ -50,10 +53,14 @@ watchEffect(() => {
   });
 });
 
-const filteredPokemonList = computed(() => {
-  return pokemonList?.value?.filter((pokemon: Pokemon) =>
-    pokemon.name.toLowerCase().includes(searchTerm.value.toLowerCase())
+const filterPokemonList = (list: Pokemon[] | undefined, term: string): Pokemon[] => {
+  return list?.filter((pokemon: Pokemon) =>
+    pokemon.name.toLowerCase().includes(term.toLowerCase())
   ) || [];
+};
+
+const filteredPokemonList = computed(() => {
+  return filterPokemonList(pokemonList?.value, searchTerm.value);
 });
 
 </script>.

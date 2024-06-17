@@ -4,7 +4,6 @@ import type { PokemonDetails, ResponseDetailPokemon } from '../interface/pokemon
 export const getOnlyPokemonAction = async (name: string) => {
   try {
     const { data } = await pokeApi.get<ResponseDetailPokemon>(`/pokemon/${name}`)
-    console.log(data)
 
     const pokemonDetails: PokemonDetails = {
       name: data.name,

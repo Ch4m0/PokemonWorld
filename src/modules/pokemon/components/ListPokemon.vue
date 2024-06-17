@@ -1,5 +1,5 @@
 <template>
-    <ul class="w-full mt-[40px]">
+    <ul class="w-full mt-[20px]">
         <ItemPokemon v-for="(pokemon, idx) in pokemonList" :key="idx" :pokemon="pokemon" />
     </ul>
 </template>

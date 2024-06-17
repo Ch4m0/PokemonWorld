@@ -8,7 +8,7 @@
         <p class="text-center w-80 md:max-w-[520px] md:w-4/5">
             The digital encyclopedia created by Professor Oak is an invaluable tool to Trainers in the Pokémon world.
         </p>
-        <PokeButton name="Get started" :active="true" class="mt-9" />
+        <PokeButton name="Get started" active class="mt-9" @click="$router.push({ name: 'pokemon-list' })" />
     </section>
 </template>
 

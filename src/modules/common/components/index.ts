@@ -1,0 +1,6 @@
+export * from './BottomTabMenu.vue'
+export * from './ButtonPagination.vue'
+export * from './LoadPokeBall.vue'
+export * from './ModalBase.vue'
+export * from './PokeButton.vue'
+export * from './SearchBar.vue'
