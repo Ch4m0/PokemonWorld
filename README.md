@@ -1,3 +1,5 @@
+# PokemonWorld
+
 ### Tecnologías Utilizadas
 
 - **Vue3**: Framework de JavaScript para construir interfaces de usuario interactivas y reactivas.
@@ -9,7 +11,7 @@
 - **Clipboard**: Utilizado para operaciones de copiar y pegar en la aplicación.
 - **Vue Test Utils y Vitest**: Herramientas para escribir y ejecutar pruebas unitarias en Vue.js.
 
-Este proyecto utiliza una estructura modular y organizada que facilita la gestión y escalabilidad de la aplicación Vue.js. Cada módulo tiene su propio conjunto de componentes, acciones, vistas y lógica de estado, lo que permite un desarrollo eficiente y mantenible. Además, hace uso de herramientas como Vue Query, Piniapara el manejo del estado, y Vue Router para la navegación, proporcionando así una experiencia de desarrollo robusta y coherente para una aplicación web moderna.
+Este proyecto utiliza una estructura modular y organizada que facilita la gestión y escalabilidad de la aplicación Vue.js. Cada módulo tiene su propio conjunto de componentes, acciones, vistas y lógica de estado, lo que permite un desarrollo eficiente y mantenible. Además, hace uso de herramientas como Vue Query, Pinia para el manejo del estado, y Vue Router para la navegación, proporcionando así una experiencia de desarrollo robusta y coherente para una aplicación web moderna.
 
 ### Comandos para Ejecutar el Proyecto con Vitest y Yarn
 
